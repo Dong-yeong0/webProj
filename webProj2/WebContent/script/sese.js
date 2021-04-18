@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calender</title>
-    <style>
-        th, td {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            font-size: 20px;
-            font-family: 궁서;
-            border: 2px solid black;
-            border-radius: 20px;
-        }
-    </style>
-</head>
-
-<body>
-<h3>안녕하세요</h3>
-    <script>
-        for (var mon = 1; mon <= 12; mon++) {
+         for (var mon = 1; mon <= 12; mon++) {
             document.write(mon + '월');
             var today = new Date(2021, mon - 1, 1);
             var lastDay = new Date(2021, mon, 0); //mon달의 마지막 날
@@ -30,7 +6,7 @@
             console.log(lastDay.getDate());
             var days = ['sun', 'mon', 'tue', 'wed', 'thr', 'fri', 'sta']
             var tbl = '<table border="1"><tr>';
-            for (day of days) {
+            for (var day of days) {
                 tbl += '<th>' + day + '</th>';
             }
             tbl += '</tr><tr>';
@@ -47,7 +23,3 @@
             tbl += '</table>';
             document.write('<span>' + tbl + '</span>');
         }
-    </script>
-</body>
-
-</html>
